@@ -1,0 +1,79 @@
+{
+    "pages": [
+        "pages/zhubo_x/zhubo_x",
+        "pages/music_art/music_art",
+        "pages/music/music",
+        "pages/more_diantai/more_diantai",
+        "pages/attent/attent",
+        "pages/tarber/tarber",
+        "pages/search/search",
+        "pages/detail/detail",
+        "pages/contact/contact",
+        "pages/collect/collect",
+        "pages/praise/praise",
+        "pages/disscus/disscus",
+        "pages/pinglun/pinglun",
+        "pages/commun/commun",
+        "pages/clist/clist",
+        "pages/shach/shach",
+        "pages/attention/attention",
+        "pages/list/list",
+        "pages/me/me",
+        "pages/advisory/advisory",
+        "pages/FM/FM",
+        "pages/index/index",
+        "pages/logs/logs"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#87CEFA",
+        "navigationBarTitleText": "心理FM",
+        "navigationBarTextStyle": "white",
+        "backgroundColor": "#bcc0c9"
+    },
+    
+    "tabBar": {
+        "color": "#666",
+        "selectedColor": "#333",
+        "borderStyle": "black",
+        "position": "bottom",
+        "backgroundColor": "#ffffff",
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "assets/tabs/home.png",
+                "selectedIconPath": "assets/tabs/home-active.png"
+            },
+            {
+                "pagePath": "pages/commun/commun",
+                "text": "社区",
+                "iconPath": "assets/tabs/read.png",
+                "selectedIconPath": "assets/tabs/read-active.png"
+
+            },
+            {
+                "pagePath": "pages/FM/FM",
+                "text": "FM",
+                "iconPath": "assets/tabs/fm.png",
+                "selectedIconPath": "assets/tabs/fm-active.png"
+
+            },
+            {
+                "pagePath": "pages/advisory/advisory",
+                "text": "心理咨询",
+                "iconPath": "assets/tabs/message.png",
+                "selectedIconPath": "assets/tabs/message-active.png"
+
+            },
+            {
+                "pagePath": "pages/me/me",
+                "text": "我的",
+                "iconPath": "assets/tabs/profile.png",
+                "selectedIconPath": "assets/tabs/profile-active.png"
+            }
+        ]
+    },
+
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

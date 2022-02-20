@@ -1,0 +1,122 @@
+<!-- 播放器 -->
+<view class="top" hover-class="none" hover-stop-propagation="false">
+    <!-- <view class="title">
+        {{slides.title}}
+    </view> -->
+    <view class="speak">
+        声音：{{slides.speak}}
+    </view>
+     <!-- 旋转的原 -->
+    <view class="circle" hover-class="none" hover-stop-propagation="false"  bindtap = "handleMusicPlay">
+    <image src="{{slides.cover}}" class="rote {{isPlay &&'an'}}"/> 
+    </view>
+</view>
+<!-- 条形播放器 -->
+<audio poster="" name="" author="" src="{{slides.url}}" id="myAudio" loop class="fm"></audio>
+<view class="center" hover-class="none" hover-stop-propagation="false">
+  <!-- 进度条 -->
+   <!-- <van-progress class="progress"
+  percentage="75"
+  pivot-text="紫色"
+  pivot-color="#33CC99"
+  color="linear-gradient(to right, #D1EDE5, #33CC99)"
+/> -->
+<view class="" url="" hover-class="none" hover-stop-propagation="false">
+    
+</view>
+<!-- 播放按钮 -->
+<view class="icon" >
+    <!-- 重复播放 -->
+    <button type="" bindtap="audioStart">
+    <icon class="iconfont icon-xunhuan101" type="" size="23" color="" >
+    </icon>
+    </button>
+    <!-- 上一首 -->
+    <button type="" bindtap="top">
+    <icon class="iconfont icon-shangyishou" type="" size="23" color="" >
+    </icon>
+    </button>
+    <!-- 播放/暂停 -->
+    <button type=""bindtap = "handleMusicPlay">
+    <icon class='iconfont {{isPlay?"icon-bofang1":"icon-bofang"}} big' type="" size="23" color="" bindtap = "audioPlay">
+    </icon>
+    <!-- <icon class="iconfont icon-bofang" type="" size="23" color="">
+    </icon> -->
+    </button>
+    <!-- 下一首 -->
+    <button type="" bindtap="next">
+    <icon class="iconfont icon-xiayishou" type="" size="23" color="">
+    </icon>
+    </button>
+    <!-- 主播详情-->    
+    <button type="" bindtap="so_diantai" data-id="{{slides.diantai.id}}">
+    <icon class="iconfont icon-yuedu-2" type="" size="23" color="" >
+    </icon>
+    </button>
+</view>
+
+<!-- <button type="primary" bindtap="audio14">{{id}}设置当前播放时间为14秒</button>
+<button type="primary" bindtap="audioStart">回到开头</button>  -->
+
+<!-- 评论区 -->
+<view class="penlun">
+<!-- 评论区顶部 -->
+    <view class="pen_top">评论区</view>
+        <!-- 留言 -->
+            <view class="send-box">
+                <input bindinput="changeInputValue" class="input" type="text" value="{{inputVal}}" placeholder="请输入留言……" />
+                <view class="inpit_b" bindtap="postDiantaiComment">添加</view>
+            </view>
+    <van-skeleton row="8" loading="{{ loading }}">
+        <view wx:for="{{penlun}}" wx:for-item="item" wx:key="id" class="pen_center">
+        <!-- 用户 -->
+            <view class="pen_user">
+            <!-- 左：头像  -->
+                <view class="pen_icon">
+                    <image src="{{item.user.avatar}}" />
+                </view>
+            <!-- 中：用户名 年月日 -->
+                <view  class="pen_n">
+                    <view class="pen_name" >
+                        {{item.user.nickname}}
+                    </view>
+                    <view class="pen_mon" >
+                        {{item.created}}
+                    </view>
+                </view>
+            <!--右： 点赞 -->
+                <view class="zan" bind:tap="">
+                    <view class="zan_n">
+                        {{item.zannum}}
+                    </view>
+                    <icon class="iconfont icon-dianzan_kuai" type="" size="23" color="" ></icon>
+                </view>
+            </view>
+        <!-- 评论 -->
+            <view class="pen_con">
+                {{item.content}}
+            </view>
+            <van-button  class="huifu" bind:click="onClickShow">回复</van-button>
+                <van-overlay show="{{show}}" bind:click="onClickHide">
+                    <view class="wrapper">
+                        <view class="block" catch:tap="noop" />
+                    </view>
+            </van-overlay>
+            <view class="pen_ri" > {{item.created_str}}</view>
+        </view>
+    </van-skeleton> 
+    
+    <van-loading type="spinner" style="text-align:center" />
+    </view>
+    <van-toast id="van-toast" />
+</view>
+  
+      
+
+  
+
+
+
+
+
+

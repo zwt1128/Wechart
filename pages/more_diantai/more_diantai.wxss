@@ -1,0 +1,51 @@
+.conter .swiper {
+  margin-top: 8px;
+}
+.conter .diantai {
+  display: flex;
+  flex-direction: column;
+  background-color: #E1E5F0;
+}
+.conter .diantai .diantai_top {
+  color: #fff;
+  font-size: 14px;
+  background-color: #87CEFA;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 1.25rem;
+}
+.conter .diantai .diantai_center {
+  background-color: #fff;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+.conter .diantai .diantai_center .diantai_user {
+  display: flex;
+  padding: 18px;
+}
+.conter .diantai .diantai_center .diantai_user .diantai_icon image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 15px #888888;
+}
+.conter .diantai .diantai_center .diantai_user .diantai_n {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.conter .diantai .diantai_center .diantai_user .diantai_n .diantai_title {
+  font-size: 14px;
+  color: #565656;
+}
+.conter .diantai .diantai_center .diantai_user .diantai_n .diantai_con {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #9A9B9B;
+}
+.conter .diantai .diantai_center .diantai_user .diantai_n .diantai_si {
+  margin-top: 10px;
+  display: flex;
+  font-size: 13px;
+  color: #B5B5B5;
+}

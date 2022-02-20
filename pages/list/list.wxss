@@ -1,0 +1,56 @@
+.user_info_wrap {
+  height: 45vh;
+  overflow: hidden;
+}
+.user_info_wrap .user_img_wrap {
+  position: relative;
+}
+.user_info_wrap .user_img_wrap .user_bg {
+  width: 100%;
+  height: 600rpx;
+  filter: blur(10rpx);
+}
+.user_info_wrap .user_img_wrap .user_info {
+  position: absolute;
+  Left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  text-align: center;
+}
+.user_info_wrap .user_img_wrap .user_info .user_icon {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+.user_info_wrap .user_img_wrap .user_info .user_name {
+  font-size: 40rpx;
+}
+.user_info_wrap .user_img_wrap .user_info .user_cont {
+  margin-top: 80rpx;
+  border: 1px solid #ccc;
+  border-radius: 20rpx;
+  font-size: 20rpx;
+  color: cyan;
+}
+.van-cell .iconview {
+  margin-right: 10rpx;
+}
+.van-cell .iconview .icon {
+  border-radius: 10rpx;
+  width: 90rpx;
+  height: 90rpx;
+}
+.van-cell .van-cell-text {
+  font-size: 26rpx;
+}
+.van-cell .van-cell-label {
+  font-size: 20rpx;
+}
+.van-cell .van-con {
+  float: right;
+  text-align: right;
+}
+.van-cell .van-con .van-icon {
+  width: 30rpx;
+  height: 30rpx;
+}

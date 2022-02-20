@@ -1,0 +1,11 @@
+{
+    "usingComponents": {
+        "van-cell": "../../components/vant/cell/index",
+        "van-cell-group": "../../components/vant/cell-group/index",
+        "van-toast": "../../components/vant/toast/index",
+        "van-tab": "../../components/vant/tab/index",
+        "van-tabs": "../../components/vant/tabs/index"
+    },
+    "navigationBarTitleText": "社区",
+    "enablePullDownRefresh": true
+}

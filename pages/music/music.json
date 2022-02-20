@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "van-progress": "../../components/vant/progress/index",
+        "van-image": "../../components/vant/image/index",
+        "van-overlay": "../../components/vant/overlay/index"
+
+    }
+
+}

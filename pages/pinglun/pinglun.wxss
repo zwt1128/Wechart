@@ -1,0 +1,95 @@
+.user_info_wrap .user_img_wrap {
+  position: relative;
+}
+.user_info_wrap .user_img_wrap .user_bg {
+  width: 100%;
+  height: 720rpx;
+  filter: blur(10rpx);
+}
+.user_info_wrap .user_img_wrap .user_info {
+  position: absolute;
+  Left: 50%;
+  transform: translateX(-50%);
+  top: 2%;
+  text-align: center;
+}
+.user_info_wrap .user_img_wrap .user_info .user_icon {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+.user_info_wrap .user_img_wrap .user_info .user_name {
+  font-size: 40rpx;
+}
+.user_info_wrap .user_img_wrap .user_info .user_cont {
+  margin: 30rpx 0 0 270rpx;
+  border: 1px solid #ccc;
+  border-radius: 20rpx;
+  width: 132rpx;
+  font-size: 20rpx;
+  color: cyan;
+}
+.van-cell .iconview {
+  margin-right: 10rpx;
+}
+.van-cell .iconview .icon {
+  border-radius: 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.van-cell .van-cell-text {
+  font-size: 26rpx;
+  font-weight: 700;
+}
+.van-cell .van-cell-label {
+  font-size: 20rpx;
+}
+.van-cell .van-con .van-icon {
+  float: right;
+  margin-left: 20rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.line {
+  margin-top: 30rpx;
+  border: 1px solid #ccc;
+}
+.van-cell-tex {
+  margin: 15rpx;
+  font-size: 25rpx;
+  color: #333;
+}
+.van-cell-t {
+  width: 700rpx ;
+  margin-top: 25rpx;
+  font-size: 30rpx;
+}
+.van-cell-textl {
+  margin-top: 25rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #000;
+}
+.commm {
+  position: relative;
+}
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60rpx;
+  background-color: #fff;
+}
+.nav .navigator {
+  background-color: #ccc;
+  margin-left: 65rpx;
+  width: 600rpx;
+  height: 50rpx;
+  border: 1px solid #e2e2e2;
+  border-radius: 15rpx;
+  font-size: 30rpx;
+  text-align: center;
+  color: #fff;
+  line-height: 50rpx;
+}

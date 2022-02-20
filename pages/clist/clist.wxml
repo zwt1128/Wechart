@@ -1,0 +1,22 @@
+<!--pages/clist/clist.wxml-->
+<navigator class="navigator"  url="/pages/shach/shach">请输入搜索内容</navigator>
+<van-cell-group>
+    <van-cell wx:for="{{Class}}" wx:for-item="item" wx:key="id" data-song="{{item}}"  bindtap="getlist"  >
+        <!-- 图片 -->
+        <view slot="icon" class="iconview">
+            <image class="icon" src="{{item.cover}}" />
+        </view>
+        <!-- 标题 -->
+        <view slot="title">
+            <view class="van-cell-text">{{item.title}}</view>
+            <view class="van-cell-text">{{item.speak}}</view>
+        </view>
+        <!-- value -->       
+        <!-- <view class="van">
+              <view class="van-cell-text">{{item.speak}}</view>
+        </view> -->
+    </van-cell>
+</van-cell-group>
+
+<!-- 加载提示 -->
+<van-toast id="van-toast" />

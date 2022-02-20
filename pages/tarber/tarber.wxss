@@ -1,0 +1,77 @@
+page {
+  background-color: #eee;
+}
+.swiper {
+  width: 100%;
+  height: 245rpx;
+}
+.swiper image {
+  width: 100%;
+}
+.tab {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.tab .title {
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #eee;
+  width: 40%;
+  height: 60rpx;
+  font-size: 25rpx;
+  line-height: 60rpx;
+}
+.tab .title .cur {
+  color: red;
+  border-bottom: 2rpx solid red;
+}
+.tab .title .btns {
+  flex: 1;
+  text-align: center;
+}
+.tab .cons .desc {
+  display: none;
+  font-style: 100rpx;
+}
+.tab .cons .cur {
+  display: block;
+}
+.tab .cont {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin: 10rpx;
+  border-radius: 10rpx;
+}
+.tab .cont .top {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.tab .cont .top .van-col {
+  padding: 10rpx;
+  margin: 20rpx;
+}
+.tab .cont .con {
+  font-size: 20rpx;
+  color: gray;
+}
+.tab .cont .con image {
+  width: 50rpx;
+  height: 50rpx;
+  float: left;
+  border-radius: 50%;
+  margin-left: 25rpx;
+}
+.tab .cont .con .van-col {
+  margin-top: 15rpx;
+}
+.tab .cont .bot {
+  font-size: 20rpx;
+  color: gray;
+}
+.tab .cont .bot .van-col {
+  margin: 15rpx 80rpx;
+}

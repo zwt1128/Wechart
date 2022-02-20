@@ -1,0 +1,75 @@
+<!-- pages/commun/commun.wxml -->
+<!-- http://5b0988e595225.cdn.sohucs.com/images/20180806/d7e2cddd85dc4df3a2b88df0dbde9a06.jpeg -->
+<!-- http://bpic.588ku.com/illus_water_img/19/09/25/b7c462c3889d2d06d5b1a26dc4cd7341.jpg -->
+<!-- https://pic.ibaotu.com/01/16/43/79Z888piC7CF.jpg!fw700cw -->
+<!-- 轮播图 -->
+<swiper class="swiper" indicator-dots="{{true}}" indicator-color="rgba(0,0,0,.3)" autoplay="{{true}}" interval="5000" duration="1000" circular="{{true}}">
+    <swiper-item class="swiper_item" item-id="">
+        <image class="" src="http://5b0988e595225.cdn.sohucs.com/images/20180806/d7e2cddd85dc4df3a2b88df0dbde9a06.jpeg" mode="widthFix" />
+    </swiper-item>
+    <swiper-item class="swiper_item" item-id="">
+        <image class="" src="http://bpic.588ku.com/illus_water_img/19/09/25/b7c462c3889d2d06d5b1a26dc4cd7341.jpg" mode="widthFix" />
+    </swiper-item>
+    <swiper-item class="swiper_item" item-id="">
+        <image class="" src="https://pic.ibaotu.com/01/16/43/79Z888piC7CF.jpg!fw700cw" mode="widthFix" />
+    </swiper-item>
+</swiper>
+<view class="van-comm">
+    <navigator class="van_img" url="/pages/disscus/disscus">
+        <image class="fabu" src="../../assets/icons/tian.png" />
+    </navigator>
+    <van-tabs active="{{ active }}" bind:change="onChange">
+        <van-tab title="精华">
+            <van-cell-group wx:for="{{comm}}" wx:for-item="item" wx:key="id" border="{{ false }}">
+                <van-cell use-label-slot url="/pages/pinglun/pinglun?id={{item.id}}">
+                    <!-- 图片 -->
+                    <view slot="icon" class="iconview">
+                        <image class="icon" src="{{item.user.avatar}}" />
+                    </view>
+                    <!-- 标题 -->
+                    <view slot="title">
+                        <view class="van-cell-text">{{item.user.nickname}}</view>
+                    </view>
+                    <view>
+                        <view class="van-cell-text">{{item.updated}}</view>
+                    </view>
+                    <view slot="label">
+                        <view class="van-cell-textl">{{item.title}}</view>
+                        <view class="van-cell-text">{{item.content}}</view>
+                        <view class="van-con">
+                            <image class="van-icon" src="../../assets/icons/atten.png"></image>
+                            <image class="van-icon" src="../../assets/icons/pinglun.png"></image>
+                        </view>
+                    </view>
+                </van-cell>
+            </van-cell-group>
+        </van-tab>
+        <van-tab title="最新">
+            <van-cell-group wx:for="{{new}}" wx:for-item="item" wx:key="id" border="{{ false }}">
+                <van-cell use-label-slot url="/pages/pinglun/pinglun?id={{item.id}}">
+                    <!-- 图片 -->
+                    <view slot="icon" class="iconview">
+                        <image class="icon" src="{{item.user.avatar}}" />
+                    </view>
+                    <!-- 标题 -->
+                    <view slot="title">
+                        <view class="van-cell-text">{{item.user.nickname}}</view>
+                    </view>
+                    <view>
+                        <view class="van-cell-text">{{item.updated}}</view>
+                    </view>
+                    <view slot="label">
+                        <view class="van-cell-textl">{{item.title}}</view>
+                        <view class="van-cell-text">{{item.content}}</view>
+                        <view class="van-con">
+                            <image class="van-icon" src="../../assets/icons/atten.png"></image>
+                            <image class="van-icon" src="../../assets/icons/pinglun.png"></image>
+                        </view>
+                    </view>
+                </van-cell>
+            </van-cell-group>
+        </van-tab>
+    </van-tabs>
+</view>
+<!-- 加载提示 -->
+<van-toast id="van-toast" />

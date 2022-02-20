@@ -1,0 +1,87 @@
+.container {
+  background-color: #eee;
+}
+.container .title .van-cell .iconview {
+  margin-right: 100rpx;
+  margin-left: 50rpx;
+}
+.container .title .van-cell .iconview .icon {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.container .title .van-cell .label {
+  display: flex;
+  flex-direction: row;
+}
+.container .title .van-cell .label .goodrate {
+  margin-left: 40rpx;
+}
+.container .title .cell .van-cell__label {
+  margin-left: 45rpx;
+}
+.container .cont {
+  background-color: #fff;
+  margin: 20rpx;
+  border-radius: 3%;
+}
+.container .cont .zizhi {
+  font-size: 40rpx;
+  font-weight: 700;
+  margin: 10rpx;
+}
+.container .cont .zili {
+  font-size: 28rpx;
+  font-weight: 600;
+  margin: 20rpx;
+}
+.container .cont .zili1 {
+  font-size: 28rpx;
+}
+.container .cont .lingyu {
+  font-size: 28rpx;
+  font-weight: 600;
+  margin: 20rpx;
+}
+.container .cont .lingyu1 {
+  font-size: 28rpx;
+}
+.container .cont .jieshao {
+  font-size: 28rpx;
+  font-weight: 600;
+  margin: 20rpx;
+}
+.container .cont .jieshao1 {
+  font-size: 28rpx;
+}
+.container .cont .van-col--21 {
+  padding-right: 130rpx;
+}
+.container .cont .van-col--22 {
+  padding: 0rpx 0rpx;
+}
+.container .cont .van-col--23 {
+  padding: 0rpx 90rpx;
+}
+.container .foot {
+  background-color: #fff;
+  margin: 20rpx;
+  border-radius: 3%;
+}
+.container .foot .van-cell {
+  border-radius: 20rpx;
+}
+.container .foot .van-cell .iconviews {
+  margin-right: 10rpx;
+}
+.container .foot .van-cell .iconviews .icons {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+}
+.container .foot .van-cell > .van-cell__title {
+  flex: 8;
+}
+.container .foot .van-cell > .van-cell__value {
+  flex: 3;
+}

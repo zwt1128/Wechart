@@ -1,0 +1,86 @@
+/* pages/commun/commun.wxss */
+
+.van-cell .van-cell__title {
+    flex: 6
+}
+
+.van-cell .van-cell__value {
+    flex: 2
+}
+
+.van-comm {
+    position: relative;
+}
+
+.swiper {
+    height: 350rpx;
+    width: 100%;
+}
+
+.swiper_item image {
+    width: 100%;
+}
+
+.van_img {
+    position: fixed;
+    z-index: 20;
+    bottom: 10%;
+    right: 10%;
+    width: 60rpx;
+    height: 60rpx;
+    background-color: orangered;
+    border-radius: 50%;
+}
+
+.fabu {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.navigator {
+    margin: 22rpx;
+    width: 700rpx;
+    height: 50rpx;
+    border: 1px solid #ccc;
+    border-radius: 15rpx;
+    font-size: 30rpx;
+    text-align: center;
+    color: #ccc;
+    line-height: 50rpx;
+}
+
+.van-cell .iconview {
+    margin-right: 10rpx;
+}
+
+.van-cell .iconview .icon {
+    border-radius: 50%;
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.van-cell .van-cell-text {
+    margin-top: 15rpx;
+    font-size: 30rpx;
+}
+
+.van-cell .van-cell-textl {
+    font-size: 30rpx;
+    color: #000;
+}
+
+.van-cell .van .van-icon {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.van-con {
+    float: right;
+    text-align: right;
+}
+
+.van-icon {
+    margin-left: 20rpx;
+    width: 30rpx;
+    height: 30rpx;
+}

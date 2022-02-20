@@ -1,0 +1,32 @@
+<!-- pages/list/list.wxml -->
+<view>
+    <van-skeleton  row="8" loading="{{ loading }}">
+        <view class="user_info_wrap">
+            <view class="user_img_wrap">
+                <image class="user_bg" src="{{lists.diantai.user.avatar}}"></image>
+                <view class="user_info">
+                    <image class="user_icon" src="{{lists.diantai.user.avatar}}"></image>
+                    <view class="user_name">{{lists.diantai.user.nickname}}</view>
+                    <view class="user_cont" bindtap="handleCollect">{{isCollect?'已关注':'+关注'}}</view>
+                </view>
+            </view>
+        </view>
+        <van-cell-group>
+            <van-cell class="van-con" use-label-slot wx:for="{{list}}" wx:for-index="index" wx:for-item="item" wx:key="id" border="{{ false }}" wx:if="{{tid===item.diantai.user.id}}" url="">
+                <!-- 图片 -->
+                <view slot="icon" class="iconview">
+                    <image class="icon" src="{{item.cover}}" />
+                </view>
+                <!-- 标题 -->
+                <view slot="title">
+                    <view class="van-cell-text">{{item.title}}{{index}}</view>
+                </view>
+                <view slot="label">
+                    <view class="van-cell-label">{{item.diantai.user.nickname}}</view>
+                </view>
+            </van-cell>
+        </van-cell-group>
+    </van-skeleton>
+</view>
+<!-- 加载提示 -->
+<van-toast id="van-toast" />

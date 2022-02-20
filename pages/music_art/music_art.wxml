@@ -1,0 +1,50 @@
+
+<!-- 更多电台 -->
+<view class="conter">
+<!-- 主播 -->
+  <view class="zhubo">
+<!-- 主播区顶部 -->
+    <view class="zhubo_top">电台推荐</view>
+  <van-skeleton row="8" loading="{{ loading }}">  
+      <view wx:for="{{zhubo}}" wx:for-item="item" wx:key="id" class="zhubo_center">
+      <navigator url="/pages/zhubo_x/zhubo_x?id={{item.id}}">
+    <!-- 用户 -->
+    <view class="zhubo_user">
+    <!-- 左：头像  -->
+        <view class="zhubo_icon">
+        <image src="{{item.cover}}" />
+        </view>
+    <!-- 中：标题 地址 -->
+        <view  class="zhubo_n">
+            <view class="zhubo_title" >
+               {{item.title}}
+            </view>
+            <view class="zhubo_con" >
+            {{item.content}}
+            </view>
+             <view class="zhubo_si" >
+                <view>
+                  粉丝 {{item.viewnum}}
+                </view>
+                  <view>
+                   |  声音 {{item.fmnum}}
+                  </view>
+                
+            </view>
+        </view>
+  </view>
+   </navigator>
+</view>
+ </van-skeleton>  
+ <van-loading type="spinner" style="text-align:center" />
+<van-toast id="van-toast" />
+   
+    
+</view>
+</view>
+
+
+
+
+
+

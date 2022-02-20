@@ -1,0 +1,71 @@
+<view class="container">
+    <van-sticky offset-top="{{ 0 }}">
+        <view class="search_input">
+            <navigator open-type="navigate" url="/pages/search/search">搜索</navigator>
+        </view>
+    </van-sticky>
+    <van-skeleton row="8" loading="{{ loading }}">
+        <view class="tarber">
+            <van-grid direction="horizontal" column-num="2" gutter="10">
+                <van-grid-item url="/pages/tarber/tarber?classifyId=113" icon="/assets/tabs/hunlian.png" text="婚恋" />
+                <van-grid-item url="/pages/tarber/tarber?classifyId=114" icon="/assets/tabs/qinzi.png" text="亲子" />
+                <van-grid-item url="/pages/tarber/tarber?classifyId=115" icon="/assets/tabs/xueye.png" text="学业" />
+                <van-grid-item url="/pages/tarber/tarber?classifyId=116" icon="/assets/tabs/zhichang.png" text="职场" />
+            </van-grid>
+        </view>
+        <view class="qiehuan">
+            <view class="shang">
+                <van-cell-group>
+                    <van-cell title="用户心声" value="更多>"></van-cell>
+                </van-cell-group>
+            </view>
+            <view class="xia">
+                <van-cell-group>
+                    <swiper class="swiper" indicator-dots="{{true}}" indicator-color="rgba(0,0,0,.3)" autoplay="{{true}}" interval="5000" duration="1000" circular="{{false}}">
+                        <swiper-item wx:for="{{categoryshop}}" wx:for-item="item" wx:key="id">
+                            <van-cell url="/pages/detail/detail?user_id={{item.user_id}}" center use-label-slot wx:for="{{categoryshop}}" wx:for-item="item" wx:key="user_id" icon="{{item.avatar}}" title="{{item.nickname}}" value="{{item.qianming}}"></van-cell>
+                        </swiper-item>
+                    </swiper>
+                </van-cell-group>
+            </view>
+        </view>
+        <view class="tab">
+            <view class="title">
+                <view data-index="{{index}}" bindtap="change" class="{{index==active?'btns cur':'btns'}}" wx:for="{{btns}}" wx:for-item="item" wx:key="id">
+                    {{item}}
+                </view>
+            </view>
+            <view class="cons">
+                <view class="{{0==active?'desc cur':'desc'}}">
+                    <van-cell-group>
+                        <van-cell url="/pages/detail/detail?user_id={{item.user_id}}" center use-label-slot wx:for="{{categoryshop}}" wx:for-item="item" wx:key="user_id" title="{{item.qianming}}">
+                            <view slot="icon" class="iconview">
+                                <image class="icon" src="{{item.avatar}}" />
+                            </view>
+                            <view slot="label" class="label">
+                                <view class="speak">姓名:{{item.nickname}}</view>
+                                <view class="viewnum">热度:{{item.qingnum}}</view>
+                                <view class="favnum">类型:{{item.categorys}}</view>
+                            </view>
+                        </van-cell>
+                    </van-cell-group>
+                </view>
+                <view class="{{1==active?'desc cur':'desc'}}">
+                    <van-cell-group>
+                        <van-cell url="/pages/detail/detail?user_id={{item.user_id}}" center use-label-slot wx:for="{{categoryshops}}" wx:for-item="item" wx:key="user_id" title="{{item.qianming}}">
+                            <view slot="icon" class="iconview">
+                                <image class="icon" src="{{item.avatar}}" />
+                            </view>
+                            <view slot="label" class="label">
+                                <view class="speak">姓名:{{item.nickname}}</view>
+                                <view class="viewnum">热度:{{item.qingnum}}</view>
+                                <view class="favnum">类型:{{item.categorys}}</view>
+                            </view>
+                        </van-cell>
+                    </van-cell-group>
+                </view>
+            </view>
+        </view>
+    </van-skeleton>
+</view>
+<van-toast id="van-toast" />

@@ -1,0 +1,49 @@
+<!-- pages/shach/shach.wxml -->
+<!-- <van-search value="{{ value }}" placeholder="请输入搜索关键词" bind:search="onSearch" /> -->
+<view class="sha" hover-class="none" hover-stop-propagation="false">
+    <input class="navigator" value="{{value}}" bindinput="headleinput"  placeholder="请输入搜索内容" />
+<button bindtap="cancel" class="canves">取消</button>
+</view>
+<view wx:if="{{!value}}">
+    <view class="nav-font">
+        热门搜索
+    </view>
+    <view class="nav-word">
+        <view class="nav-key" wx:for="{{datass}}" wx:for-item="item" wx:key="id" data-text="{{item.name}}" bindtap="but">{{item.name}}</view>
+    </view>
+</view>
+<van-tabs wx:if="{{value}}" active="{{ active }}" >
+    <van-tab title="主播" >
+        <van-cell-group>
+            <van-cell order="{{ false }}" data-song="{{listss}}" bindtap = "getli" >
+                <!-- 图片 -->
+                <view slot="icon" class="iconview">
+                    <image class="ico" src="{{listss.user.avatar}}" />
+                </view>
+                <!-- 标题 -->
+                <view slot="title">
+                    <view class="van-cel">{{listss.user.nickname}}</view>
+                </view>
+                <!-- value -->
+                <view class="vann">
+                    <image class="van-ico" src="../../assets/icons/next.png"></image>
+                </view>
+            </van-cell>
+        </van-cell-group>
+    </van-tab>
+    <van-tab title="节目">
+        <van-cell-group>
+            <van-cell class="van-con" use-label-slot wx:for="{{shach}}" wx:for-index="index" wx:for-item="item" wx:key="id" border="{{ false }}" wx:if="{{tid===item.diantai.user.id}}" data-song="{{item}}" bindtap = "getlist">
+                <view slot="icon" class="iconview">
+                    <image class="icon" src="{{item.cover}}" />
+                </view>
+                <view slot="title">
+                    <view class="van-cell-text">{{item.title}}</view>
+                </view>
+                <view slot="label">
+                    <view class="van-cell-label">{{item.speak}}</view>
+                </view>
+            </van-cell>
+        </van-cell-group>
+    </van-tab>
+</van-tabs>

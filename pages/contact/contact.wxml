@@ -1,0 +1,12 @@
+<view class="container">
+<van-cell-group inset>
+  <van-cell title="商务经理" value="张文通" icon="manager-o" />
+  <van-cell title="工作时间" value="周一至周五,9:00-17:30" icon="clock-o" />
+  <van-cell title="联系电话" value="17634390384" icon="phone-circle-o" />
+</van-cell-group>
+<van-cell-group inset>
+  <van-cell title="商务经理" value="徐鸿博" icon="manager-o" />
+  <van-cell title="工作时间" value="周一至周五,9:00-17:30" icon="clock-o" />
+  <van-cell title="联系电话" value="17630768512" icon="phone-circle-o" />
+</van-cell-group>
+</view>

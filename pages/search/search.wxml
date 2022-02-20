@@ -1,0 +1,9 @@
+<view class="search_row">
+    <input value="{{inpValue}}" placeholder="请输入要搜索的类型" bindconfirm="search" bindinput="handleInput"></input>
+    <button bindtap="handleCancel" hidden="{{!isFocus}}">取消</button>
+</view>
+<view class="search_content">
+    <navigator wx:for="{{datass}}" wx:for-item="item" wx:key="user_id" url="/pages/detail/detail?user_id={{item.user_id}}" class="search_item">
+        {{item.nickname}}  :  {{item.categorys}}
+    </navigator>
+</view>

@@ -1,0 +1,48 @@
+
+<!-- 更多主播 -->
+<view class="conter">
+<!-- 轮播图 -->
+<swiper class="swiper" autoplay="{{true}}" interval="5000" duration="1000" circular="{{true}}">
+        <swiper-item wx:for="{{diantai.tuijian}}" wx:for-item="item" wx:key="id" class="swiper-slides">
+            <image src="{{item.cover}}" mode="widthFix" lazy-load="" binderror="" bindload=""></image>
+        </swiper-item>
+</swiper>
+<!-- 主播 -->
+  <view class="diantai">
+<!-- 主播区顶部 -->
+    <view class="diantai_top">主播推荐</view>
+    <view wx:for="{{ diantai.tuijian}}" wx:for-item="item" wx:key="id" class="diantai_center">
+    <!-- 用户 -->
+    <view class="diantai_user">
+    <!-- 左：头像  -->
+        <view class="diantai_icon">
+        <image src="{{item.user.avatar}}" />
+        </view>
+    <!-- 中：标题 地址 -->
+        <view  class="diantai_n">
+            <view class="diantai_title" >
+               {{item.title}}
+            </view>
+            <view class="diantai_con" >
+            {{item.content}}
+            </view>
+             <view class="diantai_si" >
+                <view>
+                  粉丝 {{item.viewnum}}
+                </view>
+                  <view>
+                   |  声音 {{item.fmnum}}
+                  </view>
+                
+            </view>
+        </view>
+  </view>
+</view>
+</view>
+</view>
+
+
+
+
+
+

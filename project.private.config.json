@@ -1,0 +1,78 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/me/me",
+          "pathName": "pages/me/me",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/list/list",
+          "pathName": "pages/list/list",
+          "query": "id=1005337135",
+          "scene": null
+        },
+        {
+          "name": "pages/advisory/advisory",
+          "pathName": "pages/advisory/advisory",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/attention/attention",
+          "pathName": "pages/attention/attention",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shach/shach",
+          "pathName": "pages/shach/shach",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/class/class",
+          "pathName": "pages/class/class",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/commun/commun",
+          "pathName": "pages/commun/commun",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/pinglun/pinglun",
+          "pathName": "pages/pinglun/pinglun",
+          "query": "id=6273",
+          "scene": null
+        },
+        {
+          "name": "pages/disscus/disscus",
+          "pathName": "pages/disscus/disscus",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/music/music",
+          "pathName": "pages/music/music",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

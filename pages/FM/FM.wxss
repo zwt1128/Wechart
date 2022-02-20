@@ -1,0 +1,50 @@
+.conter .swiper {
+  width: 100%;
+  text-align: center;
+}
+.conter .icon-nav {
+  display: flex;
+  border-bottom: #31EC7C;
+  margin: 10px auto;
+}
+.conter .icon-nav .icon-o {
+  width: 150px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.conter .icon-nav .icon-o text {
+  font-size: 14px;
+  color: #666666;
+}
+.conter .icon-nav .icon-o .iconfont {
+  font-size: 35px;
+}
+.conter .icon-nav .icon-o .icon-huatong {
+  color: #31EC7C;
+}
+.conter .icon-nav .icon-o .icon-xihuan {
+  color: #E58FAC;
+}
+.conter .icon-nav .icon-o .icon-mianfeishiting {
+  color: #5F9BEB;
+}
+.conter .icon-nav .icon-o .icon-diantai1 {
+  color: #F9D11F;
+}
+.conter .FM-atr {
+  background-color: #3c3c3c;
+  width: 18.75rem;
+  box-shadow: 10px 10px 5px #888888;
+}
+.conter .FM-atr .FM-text {
+  width: 11.25rem;
+  font-size: 13px;
+}
+.conter .FM-atr .FM-icon {
+  padding: 8px;
+}
+.conter .FM-atr .FM-icon image {
+  height: 4.375rem;
+  width: 4.375rem;
+}

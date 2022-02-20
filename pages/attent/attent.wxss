@@ -1,0 +1,22 @@
+/* pages/attent/attent.wxss */
+
+.van-cell .iconview {
+    margin-right: 10rpx;
+}
+
+.van-cell .iconview .icon {
+    border-radius: 50%;
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.van-cell .van-cell-text {
+    margin-top: 30rpx;
+    font-size: 30rpx;
+}
+
+.van-cell .van .van-icon {
+    width: 30rpx;
+    height: 30rpx;
+    margin-top: 35rpx;
+}

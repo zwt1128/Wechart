@@ -1,0 +1,32 @@
+/* pages/clist/clist.wxss */
+
+.navigator {
+    margin: 22rpx;
+    width: 700rpx;
+    height: 50rpx;
+    border: 1px solid #ccc;
+    border-radius: 15rpx;
+    font-size: 30rpx;
+    text-align: center;
+    color: #ccc;
+    line-height: 50rpx;
+}
+
+.van-cell .iconview {
+    margin-right: 10rpx;
+}
+
+.van-cell .iconview .icon {
+    border-radius: 50%;
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.van-cell .van-cell-text {
+    font-size: 30rpx;
+}
+
+.van-cell .van .van-icon {
+    width: 30rpx;
+    height: 30rpx;
+}

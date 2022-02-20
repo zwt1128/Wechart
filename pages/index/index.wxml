@@ -1,0 +1,99 @@
+<view class="box">
+  <!-- 搜索框 -->
+  <view class="search">
+    <icon class="search_img" type="search" size="23"></icon>
+    <navigator class="input" url="/pages/shach/shach" type="text">请输入搜索关键字</navigator>
+    <!-- <input placeholder="请输入搜索关键字" type="text"></input> -->
+    <icon type="clear" size="23" class="clear"></icon>
+  </view>
+  <!-- 顶层轮播图 -->
+  <view class='container'>
+    <swiper style="display: flex;flex-direction: column;justify-content: center;align-items: center;overflow:unset;width:100%;height:360rpx;margin:5rpx;" bindchange="changeSwiper" previous-margin="150rpx" next-margin="150rpx" circular="true" autoplay="true" interval="2000">
+      <block wx:for="{{imgList}}" wx:key>
+        <swiper-item class=" {{currentIndex == index ? 'swiperItemActive': 'swiperItem'}}">
+          <image mode="aspectFill" src='{{item.img}}' class="imageItem {{currentIndex == index ? 'active': ''}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 热门推荐 -->
+  <view class="hot">
+    <view class="tuijian">
+      <image size="10" src="https://iconfont.alicdn.com/t/6f705a62-85de-4aa5-8e67-e14ef025ef51.png" class="moon"></image>
+      <text class="hot_text">热门推荐</text>
+      <!-- <text class="iconfont    icon-biankuang" style="width: 200rpx; height: 20rpx;"></text> -->
+    </view>
+    <view class="content">
+      <van-grid column-num="4" border="{{ false }}">
+        <van-grid-item url="/pages/clist/clist?category_id=1" use-slot wx:for="{{ 1 }}">
+          <text class="iconfont  icon-chengchangguiji" style="width: 60rpx; height: 60rpx;"></text>
+          <text>自我成长</text>
+        </van-grid-item>
+        <van-grid-item url="/pages/clist/clist?category_id=2" use-slot wx:for="{{ 1 }}">
+          <text class="iconfont  icon-qingxu" style="width: 60rpx; height: 60rpx;"></text>
+          <text>情绪管理</text>
+        </van-grid-item>
+        <van-grid-item url="/pages/clist/clist?category_id=3" use-slot wx:for="{{ 1 }}">
+          <text class="iconfont icon-network" style="width: 60rpx; height: 60rpx;"></text>
+          <text>人际沟通</text>
+        </van-grid-item>
+        <van-grid-item url="/pages/clist/clist?category_id=4" use-slot wx:for="{{ 1 }}">
+          <text class="iconfont    icon-lianaixx" style="width: 60rpx; height: 60rpx;"></text>
+          <text>恋爱婚姻</text>
+        </van-grid-item>
+        <van-grid-item url="/pages/clist/clist?category_id=5" use-slot wx:for="{{ 1 }}">
+          <text class="iconfont    icon-waimaozhichang" style="width: 60rpx; height: 60rpx;"></text>
+          <text>职场管理</text>
+        </van-grid-item>
+        <van-grid-item url="/pages/clist/clist?category_id=6" use-slot wx:for="{{ 1 }}">
+          <text class="iconfont    icon-qinzi" style="width: 60rpx; height: 60rpx;"></text>
+          <text>亲子家庭</text>
+        </van-grid-item>
+        <van-grid-item url="/pages/clist/clist?category_id=7" use-slot wx:for="{{ 1 }}">
+          <text class="iconfont  icon-kepu-" style="width: 60rpx; height: 60rpx;"></text>
+          <text>心理科普</text>
+        </van-grid-item>
+        <van-grid-item url="/pages/clist/clist?category_id=8" use-slot wx:for="{{ 1 }}">
+          <text class="iconfont  icon-ziyuan" style="width: 60rpx; height: 60rpx;"></text>
+          <text>课程讲座</text>
+        </van-grid-item>
+      </van-grid>
+    </view>
+  </view>
+  <!-- 播放列表 -->
+  <view class="radio">
+    <!-- <image class="light" src="https://iconfont.alicdn.com/t/a5235c94-4081-48e4-9a20-f84d10084646.png" style="margin: -420rpx 0 0 0;z-index:1"></image> -->
+    <view class="radio_item" wx:for="{{slides}}" >
+      <view class="img">
+        <image class="im" src="http://www.icosky.com/icon/png/Media/Play%20Stop%20Pause/Play%20Normal.png" />
+        <image src="{{item.cover}}"></image>
+      </view>
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+  <!-- 精选推荐 -->
+  <view class="found">
+    <view class="caption">
+      <!-- <image src="https://iconfont.alicdn.com/t/8f5a7229-4968-4a28-8aac-a0318cca652d.png" /> -->
+      <image class="pic" src="https://iconfont.alicdn.com/t/dbfde688-48d3-4fbc-b3ab-1844afd0e674.png"></image>
+      <text>精选推荐</text>
+    </view>
+    <van-cell-group class="found_fo">
+      <van-cell class="found_item" use-label-slot wx:for="{{founds}}" wx:for-item="item" wx:key="id" data-song="{{item}}" bindtap="getlist">
+        <!-- 图片 -->
+        <view slot="icon" class="found_img">
+          <image class="icon_img" src="{{item.cover}}" />
+        </view>
+        <!-- 标题 -->
+        <view slot="title" class="">
+          <image class="pic" src="https://iconfont.alicdn.com/t/d9f6d79b-a1e9-4a62-95ab-102374c19f46.png"></image>
+          <view class="found_title">{{item.title}}</view>
+        </view>
+      </van-cell>
+    </van-cell-group>
+  </view>
+  <!-- 返回顶部 -->
+  <view>
+    <image src="https://iconfont.alicdn.com/t/4d3d9c4d-e9df-4ba1-8cd2-47464b263d21.png" class="goTop" bindtap="goTop"></image>
+  </view>
+</view>

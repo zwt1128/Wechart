@@ -1,0 +1,9 @@
+.van-cell{
+  width: 100%;
+  height: 220rpx;
+}
+.van-cell .van-cell__value {
+  color: red;
+  font-size: 40rpx;
+}
+

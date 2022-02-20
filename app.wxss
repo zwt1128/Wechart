@@ -1,0 +1,6 @@
+/**app.wxss**/
+
+@import "/assets/incon/icon.wxss";
+.container {
+    height: 100%;
+}

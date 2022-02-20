@@ -1,0 +1,110 @@
+.search_input {
+  text-align: center;
+  border: 2rpx solid #ccc;
+  margin: 20rpx 10rpx;
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  color: #aaa;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.row .van_row {
+  margin: 40rpx;
+  border-radius: 20%;
+  background-color: #eee;
+}
+.tarber {
+  margin-top: 40rpx;
+}
+.van-grid-item__content {
+  background-color: #fff !important;
+  border-radius: 20rpx;
+}
+.qiehuan {
+  background-color: #fff;
+  width: 89%;
+  height: 100%;
+  padding: 20rpx;
+  margin: 20rpx;
+  border-radius: 20rpx;
+}
+.qiehuan .shang {
+  height: 100rpx;
+  overflow: hidden;
+  margin: 20rpx;
+  margin-right: 40rpx;
+}
+.qiehuan .shang .van-cell {
+  background-color: #fff !important;
+  box-shadow: 0rpx 0rpx 5rpx 5rpx #eee;
+}
+.qiehuan .shang .van-cell__title {
+  font-size: 40rpx;
+  font-weight: 700;
+}
+.qiehuan .shang .van-cell__value {
+  font-size: 25rpx;
+}
+.qiehuan .xia {
+  margin: 20rpx;
+  height: 150rpx;
+  overflow: hidden;
+  margin-right: 40rpx;
+}
+.qiehuan .xia .van-cell {
+  height: 150rpx;
+  background-color: #eee !important;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+}
+.tab {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.tab .title {
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #eee;
+  width: 40%;
+  height: 120rpx;
+  font-size: 27rpx;
+  line-height: 120rpx;
+}
+.tab .title .cur {
+  font-size: 35rpx;
+  font-weight: 700;
+  color: black;
+  border-bottom: 2rpx solid black;
+}
+.tab .title .btns {
+  flex: 1;
+  text-align: center;
+}
+.tab .cons .desc {
+  display: none;
+  font-style: 100rpx;
+  text-align: center;
+  line-height: 200rpx;
+}
+.tab .cons .cur {
+  display: block;
+}
+.tab .cons .van-cell .iconview {
+  margin-right: 10rpx;
+}
+.tab .cons .van-cell .iconview .icon {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.tab .cons .van-cell .label {
+  display: flex;
+  flex-direction: column;
+}

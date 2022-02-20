@@ -1,0 +1,173 @@
+.all .top {
+  background-color: #92d1f8;
+  color: #fff;
+}
+.all .top .one {
+  display: flex;
+  padding: 15px;
+}
+.all .top .one .one-ri image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.all .top .one .one-le {
+  margin-left: 10px;
+}
+.all .top .one .one-le .one_te {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.all .top .one .one-le .one_co {
+  font-size: 12px;
+}
+.all .top .two {
+  display: flex;
+  font-size: 10px;
+  padding: 10px;
+}
+.all .top .two :nth-child(1) {
+  margin-right: 20px;
+}
+.all .top .three {
+  display: flex;
+  margin-top: 10px;
+}
+.all .top .three .three-left {
+  flex: 1;
+  display: flex;
+  padding: 10px;
+}
+.all .top .three .three-left .fensis {
+  font-weight: bold;
+}
+.all .top .three .three-ri {
+  width: 20%;
+  float: right;
+  height: 30px;
+  border-radius: 18px;
+  background-color: coral;
+  color: #fff;
+  margin-right: 10px;
+  line-height: 30px;
+}
+.all .jiemu_li .jiemu_top {
+  display: flex;
+  position: relative;
+  padding: 8px;
+}
+.all .jiemu_li .jiemu_top .jiemu_top_o .jiemu_oo {
+  font-size: 12px;
+  height: 30px;
+}
+.all .jiemu_li .jiemu_top .jiemu_top_o .jiemu_ooo {
+  font-size: 10px;
+  position: absolute;
+  bottom: 0.625rem;
+  right: 0.625rem;
+}
+.all .jiemu_li .jiemu_top .jiemu_top_w {
+  background-color: #A3E3CF;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  margin-right: 10px;
+}
+.all .jiemu_li .jiemu_top .jiemu_top_w .iconfont {
+  font-size: 40px;
+  color: #ffffff;
+}
+.all .jiemu_pi {
+  margin-bottom: 10px;
+  border-radius: 0px 0px 14px 14px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.all .jiemu_pi .pen_user {
+  display: flex;
+  padding: 8px;
+}
+.all .jiemu_pi .pen_user .pen_icon {
+  flex: 1;
+}
+.all .jiemu_pi .pen_user .pen_icon image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: #33CC99 2px solid;
+}
+.all .jiemu_pi .pen_user .pen_n {
+  flex: 1;
+  flex-direction: column;
+}
+.all .jiemu_pi .pen_user .pen_n .pen_name {
+  font-size: 14px;
+  color: #B5B5B5;
+}
+.all .jiemu_pi .pen_user .pen_n .pen_mon {
+  font-size: 12px;
+  color: #B5B5B5;
+}
+.all .jiemu_pi .pen_user .zan {
+  flex: 1;
+  position: relative;
+}
+.all .jiemu_pi .pen_user .zan .iconfont {
+  position: absolute;
+  color: #33CC99;
+  right: 0px;
+  top: 0px;
+}
+.all .jiemu_pi .pen_con {
+  padding: 8px 40px;
+  font-size: 13px;
+  color: #B5B5B5;
+}
+.all .jiemu_pi .pen_ri {
+  margin-bottom: 10px;
+  display: flex ;
+  justify-content: flex-end;
+  font-size: 11px;
+  color: #B5B5B5;
+  padding-right: 8px;
+}
+.all .jiemu_pi .pen_hui {
+  height: 10px;
+}
+.all .msg-box .send-box {
+  display: flex;
+}
+.all .msg-box .send-box .mag-input {
+  width: 70%;
+}
+.all .send-box {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0 0 0 ;
+  color: #33cc99;
+  border: #33CC99 1px solid;
+  border-radius: 5px;
+  margin: 10px 10px;
+  position: relative;
+  height: 60px;
+}
+.all .input {
+  color: #33CC99;
+  font-size: 12px;
+  padding-left: 10px;
+}
+.all .inpit_b {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 10%;
+  text-align: center;
+  background-color: #33CC99;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 2px;
+  padding: 3px;
+  margin: 8px;
+}

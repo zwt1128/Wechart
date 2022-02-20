@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+        "van-cell": "../../components/vant/cell/index",
+        "van-cell-group": "../../components/vant/cell-group/index",
+        "van-search": "../../components/vant/search/index",
+        "van-tab": "../../components/vant/tab/index",
+        "van-tabs": "../../components/vant/tabs/index"
+    },
+    "navigationBarTitleText": "搜索中心"
+}

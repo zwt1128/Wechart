@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "van-tab": "../../components/vant/tab/index",
+        "van-tabs": "../../components/vant/tabs/index",
+        "van-popup": "../../components/vant/popup/index"
+    }
+}

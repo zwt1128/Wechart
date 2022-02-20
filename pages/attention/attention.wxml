@@ -1,0 +1,18 @@
+<!--pages/attention/attention.wxml-->
+
+<van-cell-group>
+    <van-cell wx:for="{{collectt}}" wx:for-item="item" wx:key="id"  border="{{ false }}" url="/pages/zhubo_x/zhubo_x?id={{item.id}}">
+        <!-- 图片 -->
+        <view slot="icon" class="iconview">
+            <image class="icon" src="{{item.user.avatar}}" />
+        </view>
+        <!-- 标题 -->
+        <view slot="title">
+            <view class="van-cell-text">{{item.user.nickname}}</view>
+        </view>
+        <!-- value -->       
+        <view class="van">
+               <image class="van-icon" src="../../assets/icons/next.png"></image>
+        </view>
+    </van-cell>
+</van-cell-group>

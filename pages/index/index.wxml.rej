@@ -1,0 +1,82 @@
+diff a/pages/index/index.wxml b/pages/index/index.wxml	(rejected hunks)
+@@ -1,49 +0,43 @@
+-<view class="container">
+-  <!-- æœç´¢æ¡† -->
+-  <van-search class="search" value="{{ value }}" placeholder="è¯·è¾“å…¥æœç´¢å…³é”®è¯" show-action bind:search="onSearch" bind:cancel="onCancel"></van-search>
+-  <!-- æœç´¢åŽ†å² -->
+-  <view>
+-    <view wx:for="{{list}}" wx:key="{{index}}" class="item" id="{{item.id}}" bindtap="handleItemTap">
+-      <view>{{ item }}</view>
+-      <view class="item-message">{{ item.message }}</view>
+-    </view>
+-  </view>
+-  <!-- è½®æ’­å›¾ -->
+-  <scroll-view class="content" scroll-y="{{true}}">
+-    <swiper class="slide" indicator-dots="{{true}}" circular="{{true}}" indicator-active-color="white">
+-      <swiper-item class="slide_item">
+-        <image src="https://up.enterdesk.com/edpic/ff/30/68/ff306857d5d21a4a7f8fc64cd6306edd.jpg" mode="widthFix" />
+-      </swiper-item>
+-      <swiper-item class="slide_item">
+-        <image src="https://pic3.zhimg.com/v2-460a69ba1df18a1146eef78ea41a8323_r.jpg?source=1940ef5c" mode="widthFix" />
+-      </swiper-item>
+-      <swiper-item class="slide_item">
+-        <image src="https://tenfei04.cfp.cn/creative/vcg/800/new/VCG211178908145.gif" mode="widthFix" />
+-      </swiper-item>
+-      <swiper-item class="slide_item">
+-        <image src="http://p5.itc.cn/images01/20200831/3eb0968dc82e4359888a60dc126f798b.jpeg" />
+-      </swiper-item>
+-      <swiper-item class="slide_item">
+-        <image src="https://alifei01.cfp.cn/creative/vcg/800/new/VCG211301828852.jpg" mode="widthFix" />
+-      </swiper-item>
++<!-- æœç´¢æ¡† -->
++<view class="search">
++  <icon type="search" class="search-img"></icon>
++  <input type="text" placeholder="è¯·è¾“å…¥æœç´¢å…³é”®å­—" bindfocus="onbindfocus"></input>
++  <icon type="clear" class="clear_img" wx:if="{{search_clear}}" bindtap="onbingtop"></icon>
++</view>
++<view wx:if="{{contaoner_show}}">
++  <!-- é¡¶å±‚è½®æ’­å›¾ -->
++  <view class='container'>
++    <swiper style="display: flex;flex-direction: column;justify-content: center;align-items: center;overflow:unset;width:100%;height:360rpx;margin:5rpx;" bindchange="changeSwiper" previous-margin="150rpx" next-margin="150rpx" circular="true" autoplay="true" interval="2000">
++      <block wx:for="{{imgList}}" wx:key>
++        <swiper-item class=" {{currentIndex == index ? 'swiperItemActive': 'swiperItem'}}">
++          <image mode="aspectFill" src='{{item.img}}' class="imageItem {{currentIndex == index ? 'active': ''}}"></image>
++        </swiper-item>
++      </block>
+     </swiper>
+-  </scroll-view>
+-  <view class="content_list">
+-    <view class="content_item">
+-      <navigator class="content_url" url="/pages/index/index" open-type="switchTab">å¿ƒç†ç§‘æ™®</navigator>
+-      <navigator class="content_url" url="/pages/index/index" open-type="switchTab">äººé™…äº¤å¾€</navigator>
++  </view>
++  <view class="radio">
++    <!-- <view class="content">
++      <navigator class="content_url" url="/pages/content/content" open-type="reLaunch">
++        å¿ƒç†ç§‘æ™®
++      </navigator>
++      <navigator class="content_url" url="/pages/index/index" open-type="reLaunch">äººé™…äº¤å¾€</navigator>
+       <navigator class="content_url" url="/pages/index/index" open-type="switchTab">ä¸¤æ€§æƒ…æ„Ÿ</navigator>
+       <navigator class="content_url" url="/pages/index/index" open-type="switchTab">å®¶åº­å…³ç³»</navigator>
+       <navigator class="content_url" url="/pages/index/index" open-type="switchTab">èŒåœºç¤¾äº¤</navigator>
+-    </view>
+-    <van-grid direction="horizontal" column-num="2" gutter="{{ 10 }}">
+-      <van-grid-item wx:for="{{slides}}" wx:for-item="item" wx:key="id" text="{{item.title}}">
+-        <view slot="icon" class="img_list">
++    </view> -->
++    <van-grid direction="horizontal" column-num="2" gutter="{{ 10 }}" class="radio_list">
++      <van-grid-item wx:for="{{slides}}" wx:for-item="item" wx:key="id" text="{{item.title}}" class="radio_item">
++        <view slot="icon" class="radio_img">
+           <image class="im" src="/assets/tabs/æš‚åœ.png" />
+           <image class="img" src="{{item.cover}}" />
+         </view>
+       </van-grid-item>
+     </van-grid>
++    <view class="hot" wx:for-item="item" wx:key="id" text="{{item.title}}" wx:for="{{slides}}">
++      <text>{{item.title}}</text>
++      <image src="{{item.cover}}"></image>
++      <!-- <image src="/assets/tabs/æš‚åœ.png"></image> -->
++    </view>
+   </view>
+   <!-- è¿”å›žé¡¶éƒ¨ -->
+   <image src="/assets/tabs/æŒ¥æ‰‹å°ç»¿äºº.png" class="goTop" bindtap="goTop"></image>

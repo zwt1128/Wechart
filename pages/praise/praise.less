@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'iconfont';
+    /* Project id 2911378 */
+    src: url('//at.alicdn.com/t/font_2911378_lz0z8w8e57m.woff2?t=1635920435372') format('woff2'),
+        url('//at.alicdn.com/t/font_2911378_lz0z8w8e57m.woff?t=1635920435372') format('woff'),
+        url('//at.alicdn.com/t/font_2911378_lz0z8w8e57m.ttf?t=1635920435372') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 32rpx;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shichang:before {
+    content: "\e659";
+}
+
+.icon-shouting:before {
+    content: "\e603";
+}
+
+.icon-bofang:before {
+    content: "\e8a3";
+}
+
+.icon-zanting:before {
+    content: "\e629";
+}
+
+.van-cell-group {
+
+    .van-cell {
+        width: 100%;
+        height: 250rpx;
+
+        .iconview {
+            position: relative;
+
+            .icon {
+                border-radius: 50%;
+                width: 100rpx;
+                height: 100rpx;
+            }
+
+            .switch {
+                font-size: 40px;
+                color: #fff;
+            }
+
+            .icon-bofang:before {
+                position: absolute;
+                top: 30rpx;
+                right: 10rpx;
+            }
+
+            .icon-zanting:before {
+                position: absolute;
+                top: 30rpx;
+                right: 10rpx;
+            }
+
+        }
+
+        .van-cell__title {
+            font-size: 15px;
+            margin-left: 30rpx;
+            color: #343434;
+        }
+
+        .van-cell-text {
+            margin-top: 30rpx;
+            font-size: 30rpx;
+        }
+
+        .van-cell__value {
+            color: red;
+            font-size: 60rpx;
+        }
+
+        .van-cell__label {
+            text {
+                font-size: 25rpx;
+            }
+        }
+
+    }
+
+
+
+}

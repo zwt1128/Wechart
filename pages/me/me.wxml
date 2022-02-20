@@ -1,0 +1,49 @@
+<view class="container">
+  <view class="head">
+    <button class="login" bindtap="handleAdd" wx:if="{{!isLogin}}">     
+      <text >{{words}}</text>
+    </button>
+    <image src="{{token.avatarUrl}}" mode="heightFix" wx:if="{{isLogin}}"></image>
+  </view>
+  <view class="body">
+    <view class="about-me">
+      <van-cell is-link title="我关注的电台" link-type="navigateTo" url="/pages/attention/attention">
+        <view slot="icon">
+          <view class="van-cell-text">
+            <icon class="iconfont icon-diantai" />
+          </view>
+        </view>
+      </van-cell>
+      <van-cell is-link title="我关注的人" link-type="navigateTo" url="/pages/attent/attent">
+        <view slot="icon">
+          <view class="van-cell-text">
+            <icon class="iconfont icon-diantai" />
+          </view>
+        </view>
+      </van-cell>
+      <van-cell is-link title="我赞过的电台" link-type="navigateTo" url="/pages/praise/praise">
+        <view slot="icon">
+          <view class="van-cell-text">
+            <icon class="iconfont icon-dianzanguo" />
+          </view>
+        </view>
+      </van-cell>
+      <button class="kefu" open-type="contact" bindcontact="handleContact">
+        <van-cell is-link title="在线客服" link-type="navigateTo" url="/pages/online/online">
+          <view slot="icon">
+            <view class="van-cell-text">
+              <icon class="iconfont icon-kefu" />
+            </view>
+          </view>
+        </van-cell>
+      </button>
+      <van-cell is-link title="联系我们" link-type="navigateTo" url="/pages/contact/contact">
+        <view slot="icon">
+          <view class="van-cell-text">
+            <icon class="iconfont icon-lianxiwomen" />
+          </view>
+        </view>
+      </van-cell>
+    </view>
+  </view>
+</view>

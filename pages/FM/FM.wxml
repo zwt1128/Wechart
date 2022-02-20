@@ -1,0 +1,53 @@
+<!-- FM主页 -->
+<view class="conter">
+<!-- 轮播图 -->
+<swiper class="swiper" autoplay="{{true}}" interval="5000" duration="1000" circular="{{true}}">
+        <swiper-item wx:for="{{slides}}" wx:for-item="item" wx:key="id" class="swiper-slides">
+            <image src="{{item.diantai.cover}}" mode="widthFix" lazy-load="" binderror="" bindload=""></image>
+        </swiper-item>
+</swiper>
+    
+
+ <view class="icon-nav">
+  <navigator class="icon-o" url="/pages/music_art/music_art?id={{item.id}}&diantai={{item.diantai.id}}">
+        <icon class="iconfont icon-diantai1" />
+        <text class="">
+            电台
+        </text>
+    </navigator>
+    <navigator class="icon-o" data-song="{{list[0]}}" bindtap = "getlist">
+        <icon class="iconfont icon-mianfeishiting" />
+        <text>
+            倾听 |FM
+        </text>
+    </navigator>
+   
+ </view> 
+
+<view>
+    
+</view>
+  
+<!-- 点播页 -->
+    <van-skeleton row="8" loading="{{ loading }}">
+        <van-cell-group>
+            <van-cell  center use-label-slot wx:for="{{slides}}" wx:for-item="item" wx:key="id"  class="FM-atr" data-song="{{item}}"  bindtap="getlist">
+                <view slot="icon" class="FM-icon">
+                    <image class="icon" src="{{item.cover}}" />
+                </view>
+                <view slot="title" class="FM-text">
+                    <text >{{item.title}}</text>
+                </view>
+                <view slot="label">
+                    <view class="speak">{{item.speak}}</view>
+                </view>
+                <view class="" hover-class="none" hover-stop-propagation="false">
+                    
+                </view>
+            </van-cell>
+        </van-cell-group>
+    </van-skeleton>
+    <van-loading type="spinner" style="text-align:center" />
+
+</view>
+<van-toast id="van-toast" />

@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "van-uploader": "../../components/vant/uploader/index"
+    }
+}

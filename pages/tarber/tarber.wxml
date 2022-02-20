@@ -1,0 +1,50 @@
+<view class="container">
+    <swiper class="swiper" indicator-dots="{{true}}" indicator-color="rgba(0,0,0,.3)" autoplay="{{true}}" interval="5000" duration="1000" circular="{{true}}">
+        <swiper-item wx:for="{{urls}}" wx:for-item="item" wx:key="id">
+            <image class="" src="{{item}}" mode="widthFix" lazy-load="{{true}}" />
+        </swiper-item>
+    </swiper>
+    <view class="tab">
+        <view class="title">
+            <view data-index="{{index}}" bindtap="change" class="{{index==active?'btns cur':'btns'}}" wx:for="{{btns}}">
+                {{item}}
+            </view>
+        </view>
+        <view class="cons">
+            <view class="{{0==active?'desc cur':'desc'}}">
+                <view class="cont" wx:for="{{list}}" wx:for-item="item" wx:key="id">
+                    <van-row class="top">
+                        <van-col offset="0" span="24">{{item.title}}</van-col>
+                    </van-row>
+                    <van-row class="con">
+                        <image src="{{item.questionAnswerList[0].userInfo.avatar}}" />
+                        <van-col offset="1" span="8">
+                            {{item.questionAnswerList[0].answerer}}
+                        </van-col>
+                        <van-col offset="3" span="8">{{item.quizzer}}人浏览</van-col>
+                    </van-row>
+                    <van-row class="bot">
+                        <van-col offset="2" span="24">感谢您的留言和提问</van-col>
+                    </van-row>
+                </view>
+            </view>
+            <view class="{{1==active?'desc cur':'desc'}}">
+                <view class="cont" wx:for="{{lists}}" wx:for-item="item" wx:key="id">
+                    <van-row class="top">
+                        <van-col offset="0" span="24">{{item.title}}</van-col>
+                    </van-row>
+                    <van-row class="con">
+                        <image src="{{item.questionAnswerList[0].userInfo.avatar}}" />
+                        <van-col offset="1" span="8">
+                            {{item.questionAnswerList[0].answerer}}
+                        </van-col>
+                        <van-col offset="3" span="8">{{item.quizzer}}人浏览</van-col>
+                    </van-row>
+                    <van-row class="bot">
+                        <van-col offset="2" span="24">感谢您的留言和提问</van-col>
+                    </van-row>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

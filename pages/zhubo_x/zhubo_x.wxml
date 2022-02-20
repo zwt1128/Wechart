@@ -1,0 +1,124 @@
+<!-- 主播详情 -->
+<view class="all">
+<!-- 头部 -->
+    <view class="top">
+    <!-- one -->
+        <view class="one">
+        <!-- 头像 -->
+            <view class="one-ri">
+            <image class="" src="{{slides.user.avatar}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+              
+            </view>
+        <!-- 个人认证 -->
+            <view class="one-le">
+                <view class="one_te">
+                    {{slides.user.nickname}}
+                </view>
+                 <view class="one_co">
+                    个人认证：{{slides.content}}
+                </view>
+                 <view class="one_te">
+                    
+                </view>
+            </view>
+        </view>
+    <!-- two -->     
+     <view class="two">
+        <view >电话：{{slides.user.phone}}</view>
+        <view >邮箱：{{slides.user.username}}</view>
+        <!-- <view >粉丝：{{slides.viewnum}}</view> -->
+     </view>
+    <!-- three -->
+     <view class="three">
+         <view class="three-left">
+            <view class="fensis">
+                {{slides.viewnum}}
+            </view>
+                
+            <view class="fensi">
+                粉丝
+            </view>
+         </view>
+         
+         <view class="three-ri" bindtap="handleC">
+            {{isC?'已关注':'+关注'}}
+         </view>
+     </view>
+    </view>
+ <!--  节目列表-->
+    <van-tabs animated>
+        <van-tab title="听单">
+            <navigator  wx:for="{{jiemuli}}" wx:for-item="item" wx:key="id" class="swiper-slides jiemu_li" data-list="{{item}}" bindtap = "tozhuan">
+                    <view class="jiemu_top" >
+                        <view class="jiemu_top_w">
+                            <icon class="iconfont icon-diantai"></icon>
+                        </view>
+                        <view class="jiemu_top_o" >
+                            <view class="jiemu_oo">
+                                {{item.title}}
+                            </view>
+                            <view class="jiemu_ooo">
+                                <icon class="iconfont icon-shengyin_o"></icon>
+                                {{item.viewnum}}
+                            </view>
+                        </view> 
+                    </view>
+            </navigator>
+        </van-tab>
+        <van-tab title="留言列表">
+                <!-- 留言 -->
+                    <view class="send-box">
+                        <input bindinput="changeInputValue" class="input" type="text" value="{{inputVal}}" placeholder="请输入留言……" />
+                        <view class="inpit_b" bindtap="postDiantaiComment">添加</view>
+                    </view>
+             
+               <view wx:for="{{liuyan}}" wx:for-item="item" wx:key="id" class="pen_center">
+                <!-- 用户 -->
+                    <navigator class="jiemu_pi">
+                        <view class="pen_user">
+                             <!-- 左：头像  -->
+                            <view class="pen_icon">
+                                <image src="{{item.user.avatar}}" />
+                            </view>
+                            <!-- 中：用户名 年月日 -->
+                            <view  class="pen_n">
+                                <view class="pen_name" >
+                                    {{item.user.nickname}}
+                                </view>
+                                <view class="pen_mon" >
+                                    {{item.created}}
+                                </view>
+                            </view>
+                             <!--右： 点赞 -->
+                            <view class="zan" url="http://yiapi.xinli001.com/fm/post-comment-like.json">
+                                <icon class="iconfont icon-dianzan_kuai" type="" size="23" color="" ></icon>
+                            </view>
+                        </view>
+                            <!-- 评论 -->
+                        <view class="pen_con">true
+                            {{item.content}}
+                        </view>
+                        <view class="pen_ri" > {{item.created_str}}</view>
+                        <view class="pen_ri">
+                            <view slot="title">
+                                <van-cell  bind:click="showPopup" />回复
+                                <van-popup show="{{show}}" bind:close="onClose" round closeable position="bottom"custom-style="height: 20%;"z-index="100"class="pen_hui" >内容</van-popup>
+                            </view>
+                        </view>
+                    </navigator>
+                </view>
+        </van-tab> 
+    </van-tabs>  
+</view>
+
+
+
+
+
+
+
+
+    
+
+  
+  

@@ -1,0 +1,9 @@
+<view class="container" >
+  <van-cell use-label-slot wx:for="{{praiseData}}" wx:for-item="item" wx:key="id" value="{{heart}}" border="{{ false }}" >
+     <view slot="icon" class="iconview">
+      <audio poster="{{item.cover}}" author="主播:{{item.speak}}" src="{{item.url}}" id="myAudio" controls loop></audio>
+    </view>
+  </van-cell>
+</view>
+
+

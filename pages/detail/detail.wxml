@@ -1,0 +1,48 @@
+<view class="container">
+    <view class="title">
+        <van-cell-group>
+            <van-cell class="van-cell" use-label-slot title="{{catego.nickname}}">
+                <view slot="icon" class="iconview">
+                    <image class="icon" src="{{catego.avatar}}" />
+                </view>
+                <view slot="label" class="label">
+                    <view class="qingnum">{{catego.qingnum}}人咨询</view>
+                    <view class="goodrate">{{catego.goodrate}}%好评率</view>
+                </view>
+            </van-cell>
+            <van-cell class="cell" label="{{catego.qianming}}" />
+        </van-cell-group>
+    </view>
+    <view class="cont">
+        <van-row class="zizhi">
+            <van-col offset="2" span="24">资质</van-col>
+        </van-row>
+        <van-row class="zili">
+            <van-col offset="3" span="24">资历</van-col>
+        </van-row>
+        <van-row class="zili1">
+            <van-col offset="3" span="21">{{catego.qualification}}</van-col>
+        </van-row>
+        <van-row class="lingyu">
+            <van-col offset="3" span="24">领域</van-col>
+        </van-row>
+        <van-row class="lingyu1">
+            <van-col offset="3" span="22">{{catego.categorys}}</van-col>
+        </van-row>
+        <van-row class="jieshao">
+            <van-col offset="3" span="24">介绍</van-col>
+        </van-row>
+        <van-row class="jieshao1">
+            <van-col offset="0" span="23">{{catego.introduction}}</van-col>
+        </van-row>
+    </view>
+    <view class="foot">
+        <van-cell-group>
+            <van-cell wx:for="{{comme}}" wx:for-item="item" wx:key="id" title="{{item.nickname}}" value="{{item.created}}" label="{{item.content}}">
+                <view slot="icon" class="iconviews">
+                    <image class="icons" src="{{item.avatar}}" />
+                </view>
+            </van-cell>
+        </van-cell-group>
+    </view>
+</view>

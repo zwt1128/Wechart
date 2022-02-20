@@ -1,0 +1,7 @@
+<!--pages/disscus/disscus.wxml-->
+<view class="diss">
+<view bindtap = "fabuData" class="navi">发布</view>
+    <textarea class="texl" bindinput="titleinput" cols="30" rows="10" placeholder="标题"></textarea>
+    <textarea class="tex" bindinput="headleinput" cols="30" rows="10" placeholder="最近心情怎么样？快和大家分享一下吧！"></textarea>
+</view>
+
